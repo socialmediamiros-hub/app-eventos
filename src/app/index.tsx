@@ -3,20 +3,20 @@ import { Pressable, StyleSheet, Text, View } from 'react-native';
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.badge}>EVENTOS EN TIEMPO REAL</Text>
+      <Text style={styles.badge}>CLUB SOCIAL CANINO</Text>
 
-      <Text style={styles.title}>Encontrá planes cerca tuyo</Text>
+      <Text style={styles.title}>Planes para vos y tu perro</Text>
 
       <Text style={styles.subtitle}>
-        Descubrí eventos, creá encuentros espontáneos y conectá con personas que quieren hacer algo hoy.
+        Encontrá paseos, cafés pet friendly, encuentros y experiencias cerca tuyo.
       </Text>
 
       <Pressable style={styles.primaryButton}>
-        <Text style={styles.primaryButtonText}>Explorar eventos</Text>
+        <Text style={styles.primaryButtonText}>Explorar encuentros</Text>
       </Pressable>
 
       <Pressable style={styles.secondaryButton}>
-        <Text style={styles.secondaryButtonText}>Crear un evento</Text>
+        <Text style={styles.secondaryButtonText}>Crear un plan</Text>
       </Pressable>
     </View>
   );
@@ -31,13 +31,13 @@ const styles = StyleSheet.create({
   },
   badge: {
     alignSelf: 'flex-start',
-    backgroundColor: '#333333',
+    backgroundColor: '#1F2937',
     color: '#FFFFFF',
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 999,
     fontSize: 12,
-    fontWeight: '700',
+    fontWeight: '800',
     marginBottom: 18,
   },
   title: {
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   subtitle: {
     fontSize: 18,
     lineHeight: 28,
-    color: '#FFFFFF',
+    color: '#D1D5DB',
     marginBottom: 34,
   },
   primaryButton: {
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   primaryButtonText: {
     color: '#000000',
     fontSize: 17,
-    fontWeight: '700',
+    fontWeight: '800',
   },
   secondaryButton: {
     backgroundColor: '#000000',
@@ -75,6 +75,6 @@ const styles = StyleSheet.create({
   secondaryButtonText: {
     color: '#FFFFFF',
     fontSize: 17,
-    fontWeight: '700',
+    fontWeight: '800',
   },
 });

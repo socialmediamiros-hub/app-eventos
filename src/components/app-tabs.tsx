@@ -1,31 +1,62 @@
-import { NativeTabs } from 'expo-router/unstable-native-tabs';
+import { Tabs } from 'expo-router';
 
 export default function AppTabs() {
   return (
-    <NativeTabs
-      backgroundColor="#000000"
-      indicatorColor="#FFFFFF"
-      labelStyle={{ selected: { color: '#FFFFFF' } }}
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: '#000000',
+          borderTopColor: '#222222',
+          height: 70,
+          paddingBottom: 12,
+          paddingTop: 8,
+        },
+        tabBarActiveTintColor: '#FFFFFF',
+        tabBarInactiveTintColor: '#777777',
+      }}
     >
-      <NativeTabs.Trigger name="index">
-        <NativeTabs.Trigger.Label>Inicio</NativeTabs.Trigger.Label>
-      </NativeTabs.Trigger>
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Inicio',
+        }}
+      />
 
-      <NativeTabs.Trigger name="mapa">
-        <NativeTabs.Trigger.Label>Mapa</NativeTabs.Trigger.Label>
-      </NativeTabs.Trigger>
+      <Tabs.Screen
+        name="mapa"
+        options={{
+          title: 'Mapa',
+        }}
+      />
 
-      <NativeTabs.Trigger name="crear">
-        <NativeTabs.Trigger.Label>Crear</NativeTabs.Trigger.Label>
-      </NativeTabs.Trigger>
+      <Tabs.Screen
+        name="crear"
+        options={{
+          title: 'Crear',
+        }}
+      />
 
-      <NativeTabs.Trigger name="comunidad">
-        <NativeTabs.Trigger.Label>Comunidad</NativeTabs.Trigger.Label>
-      </NativeTabs.Trigger>
+      <Tabs.Screen
+        name="comunidad"
+        options={{
+          title: 'Comunidad',
+        }}
+      />
 
-      <NativeTabs.Trigger name="perfil">
-        <NativeTabs.Trigger.Label>Perfil</NativeTabs.Trigger.Label>
-      </NativeTabs.Trigger>
-    </NativeTabs>
+      <Tabs.Screen
+        name="perfil"
+        options={{
+          title: 'Perfil',
+        }}
+      />
+
+      <Tabs.Screen
+        name="explore"
+        options={{
+          href: null,
+        }}
+      />
+    </Tabs>
   );
 }
